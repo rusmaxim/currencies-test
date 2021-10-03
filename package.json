@@ -1,7 +1,8 @@
 {
-  "name": "test-currency",
+  "name": "currencies-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rusmaxim.github.io/currencies-test",
   "dependencies": {
     "@date-io/moment": "1.x",
     "@devexpress/dx-react-core": "^2.7.6",
@@ -19,6 +20,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "gh-pages": "^3.2.3",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -27,6 +29,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

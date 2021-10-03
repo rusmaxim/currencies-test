@@ -64,6 +64,10 @@ export const CurrencyList: FC = () => {
     const [dateColumns] = useState(['date']);
     const [dateFilterOperations] = useState(['date']);
 
+
+    const [currencyColumns] = useState(['currency']);
+    const [currencyFilterOperations] = useState(['contains']);
+
     useEffect(() => {
         let invalidateFlag = false;
         async function fetchRates() {
@@ -99,6 +103,10 @@ export const CurrencyList: FC = () => {
                 for={dateColumns}
                 availableFilterOperations={dateFilterOperations}
                 editorComponent={DateEditor}
+            />
+             <DataTypeProvider
+                for={currencyColumns}
+                availableFilterOperations={currencyFilterOperations}
             />
             <FilteringState
                 filters={filters}
